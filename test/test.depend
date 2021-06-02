@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1615786004 source:c:\users\sw2164\desktop\프로젝트\test\main.c
+	<stdio.h>
+	<stdlib.h>
+
