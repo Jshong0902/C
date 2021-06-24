@@ -8,24 +8,24 @@ int main(){//i: ÇàÃ·ÀÚ, j: ¿­Ã·ÀÚ »ç¿ë
 	scanf("%d",&n);
 	re = be = n; //¿À¸¥, ¾Æ·¡ Ã·ÀÚ = n
 	le = te = 1; //¿Ş, À§ Ã·ÀÚ = 1
-	while (num < n*n) //(1)
+	while (num <= n*n) //(1)
 	{
-		for(j = le; j <= re  && num <= n * n ; i++){
+		for(i = le; i <= re  && num <= n * n ; i++){
 			a[te][i] = ++num; //(2)
-			te++;
 			}
+			te++;
 		for(i = te;  i <= be && num <= n * n; i++){
 			a[i][re] = ++num; //(3)
-			re--;
 			}//4
-		for(j = re;  j >= le && num <= n * n; j--){
+			re--;
+		for(i = re;  i >= le && num <= n * n; i--){
 			a[be][j] = ++num;
-			be--;
 			}
+			be--;
 		for(i = be;  i >= te && num <= n * n; i--){
 			a[i][le] = ++num;
-			le++;
 			}
+			le++;
 	}
 	for(i = 1; i <= n; i++, puts("")){
 		for(j = 1; j <= n; j++) 
